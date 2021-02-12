@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 
 function App() {
-  const [fName, setFName] = useState("");
-  const [lName, setLName] = useState("");
+  const [fullName, setFullName] = useState({});
 
   function updateFName(event) {
     const firstName = event.target.value;
     setFName(firstName);
   }
 
-  function updateLName(event) {
-    const lastName = event.target.value;
-    setLName(lastName);
-  }
-
   return (
     <div className="container">
       <h1>
-        Hello {fName} {lName}
+        Hello {fName}
+        {/* {lName} */}
       </h1>
       <form>
         <input
@@ -28,9 +23,9 @@ function App() {
         />
         <input
           name="lName"
-          onChange={updateLName}
+          // onChange={updateLName}
           placeholder="Last Name"
-          value={lName}
+          // value={lName}
         />
         <button>Submit</button>
       </form>
