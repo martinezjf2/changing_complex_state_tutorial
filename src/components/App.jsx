@@ -9,6 +9,11 @@ function App() {
     setFName(firstName);
   }
 
+  function updateLName(event) {
+    const lastName = event.target.value;
+    setLName(lastName);
+  }
+
   return (
     <div className="container">
       <h1>
@@ -21,7 +26,12 @@ function App() {
           placeholder="First Name"
           value={fName}
         />
-        <input name="lName" placeholder="Last Name" value={lName} />
+        <input
+          name="lName"
+          onChange={updateLName}
+          placeholder="Last Name"
+          value={lName}
+        />
         <button>Submit</button>
       </form>
     </div>
